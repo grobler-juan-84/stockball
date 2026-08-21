@@ -76,3 +76,15 @@ Added `config/research_universe.json` with SPY, QQQ, IWM, and the 11 SPDR sector
 ## Step 18 — Commit generalized ETF data pipeline to GitHub
 
 Committed ticker-parameterized download/validate/process scripts, SPY thin wrappers, `config/research_universe.json`, and updated `project_steps.md` (Steps 12–18); pushed `main` to `origin`. Raw/processed CSVs and `.env.local` remained untracked.
+
+## Step 19 — Create equity-universe pipeline runner
+
+Added `scripts/run_equity_pipeline.py` to orchestrate Acquire → Validate → Process from `config/research_universe.json` by calling existing scripts (no duplicated logic). On stage failure: skip remaining stages for that ticker, do not repair data, continue by default (optional `--stop-on-error`); exit 1 if any failed. Built and dry-run inspected only — full 14-ETF run not executed. No indicators or Experiment 001.
+
+## Step 20 — Run full equity universe through Acquire → Validate → Process
+
+Ran `scripts/run_equity_pipeline.py` for all 14 equity ETFs. All completed Acquire → Validate → Process with 0 failures. Shorter histories observed as expected for XLC (2018-06-19) and XLRE (2015-10-08). No indicators or Experiment 001.
+
+## Step 21 — Commit and push equity universe milestone to GitHub
+
+Committed the equity-universe pipeline runner and project step log through Step 21 (full 14-ETF Acquire → Validate → Process milestone); pushed `main` to `origin`. Raw/processed CSVs and `.env.local` remained untracked.
