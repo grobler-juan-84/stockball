@@ -45,7 +45,7 @@ A strong historical result is not automatically a validated pattern.
 
 | ID  | Experiment               | Status  | Evidence | Primary Outcome | Next Step              |
 | --- | ------------------------ | ------- | -------- | --------------- | ---------------------- |
-| 001 | Momentum + Market Regime | LOCKED  | —        | —               | Implement / run discovery     |
+| 001 | Momentum + Market Regime | COMPLETED | WEAK     | D vs B lift small/inconsistent; validation not revealed | Archive; descendant experiments only |
 
 ---
 
@@ -53,11 +53,13 @@ A strong historical result is not automatically a validated pattern.
 
 ## Momentum + Market Regime
 
-**Status:** LOCKED  
-**Evidence:** —  
+**Status:** COMPLETED  
+**Evidence:** WEAK  
 **Created:** 2026-08-20  
 **Locked:** 2026-08-21  
-**Specification:** `experiments/EXPERIMENT_001.md`
+**Completed:** 2026-08-21  
+**Specification:** `experiments/EXPERIMENT_001.md`  
+**Discovery results:** `experiments/001/discovery/results/`
 
 ### Research Question
 
@@ -155,7 +157,7 @@ Documented in full in `experiments/EXPERIMENT_001.md`. Summary of the predefined
 * **MAE/MFE:** `(min low / T+1 open) - 1` and `(max high / T+1 open) - 1` over T+1 through exit day; daily bars do not establish intraday path order.
 * Pooled observation counts are **not** independent-trial counts. Experiment 001 is **descriptive**; no formal statistical inference / naïve p-value in 001.
 * SPY reported separately from the pooled 13 non-SPY ETFs.
-* Validation remains hidden until discovery evaluation is complete.
+* Validation was to remain hidden until discovery evaluation; discovery was evaluated and validation was **not revealed** (see Result).
 
 **Methodology locked 2026-08-21.** Do not alter Experiment 001 after seeing results; create a descendant experiment instead.
 
@@ -176,24 +178,62 @@ Documented in full in `experiments/EXPERIMENT_001.md`. Summary of the predefined
 
 ### Result
 
-**NOT YET RUN**
+**Discovery completed 2026-08-21. Validation not revealed.**
+
+**Evidence rating (discovery, pooled 13 non-SPY, locked §16 criteria): `WEAK`**
+
+Artifacts:
+
+* `experiments/001/discovery/results/discovery_report.md`
+* `experiments/001/discovery/results/discovery_metrics.csv`
+* `experiments/001/discovery/results/discovery_evidence_assessment.json`
+
+Key **D vs B** findings (pooled non-SPY discovery; positive-outcome rate lift in percentage points):
+
+| Horizon | n_D | Pos B | Pos D | Lift (pp) |
+| ---: | ---: | ---: | ---: | ---: |
+| 1d | 8848 | 49.47% | 49.92% | +0.45 |
+| 3d | 8848 | 51.94% | 52.25% | +0.31 |
+| 5d | 8848 | 53.04% | 53.00% | −0.05 |
+| 10d | 8848 | 56.64% | 56.14% | −0.51 |
+| 20d | 8848 | 59.75% | 58.70% | −1.05 |
+
+Locked checklist summary:
+
+* min pooled n_D = 8848 (ample)
+* horizons with D>B (directional) = **2/5** (INTERESTING needs ≥3)
+* horizons with lift ≥ 3pp = **0/5**
+* non-SPY ETFs with D>B on ≥3/5 horizons = **6/13** (INTERESTING needs ≥7)
+* D-observation concentration OK (max share ~12.6% in XLE)
+* multi-metric material downside vs B: **not** flagged
+
+**Decision:** Do **not** reveal or run validation. Discovery evidence does not meet INTERESTING / STRONG CANDIDATE thresholds; spending the holdout would not change the primary conclusion that regime stacking does not earn its complexity under the locked rules. Validation inputs remain untouched under `experiments/001/validation/input/`.
 
 ### Interpretation
 
-**NOT YET AVAILABLE**
+Adding the SPY>200DMA regime filter on top of ETF 20-day momentum >5% (D vs B) produced only small, short-horizon positive-rate lifts that faded and turned negative at longer horizons. Sample size was large; downside was not the binding failure. The binding failures were **effect size** and **cross-horizon / cross-ETF robustness** under the predefined criteria.
+
+SPY-alone discovery showed small positive D-vs-B lifts at all five horizons, but Experiment 001’s primary pooled non-SPY claim remains **WEAK**.
 
 ### Follow-Up Questions
 
-**NOT YET AVAILABLE**
+Recorded for future experiments (not modifications to 001):
 
-Follow-up hypotheses should only be created after Experiment 001 has been completed and its original result permanently recorded.
+* Does a different momentum threshold or lookback change the incremental value of regime? → new experiment ID.
+* Is any short-horizon D-vs-B edge concentrated in specific sectors or regimes? → new experiment ID.
+* Does dependence-aware inference change interpretation of the descriptive lifts? → new experiment ID.
+* Should validation ever be revealed for archival completeness despite WEAK discovery? → process decision; not required by locked evidence rules.
+
+Follow-up hypotheses must not rewrite Experiment 001.
 
 ### Experiment Lineage
 
 ```text
-Experiment 001
+Experiment 001 — Momentum + Market Regime
       │
-      └── Pending
+      ├── Methodology LOCKED 2026-08-21
+      ├── Discovery COMPLETED 2026-08-21 — Evidence: WEAK
+      └── Validation NOT REVEALED (closed without holdout spend)
 ```
 
 ---
@@ -265,10 +305,11 @@ This allows us to see not only **what worked**, but how each hypothesis evolved.
 
 # Current Research State
 
-**Experiments Planned:** 1
-**Experiments Completed:** 0
-**Strong Candidates:** 0
-**Validated Patterns:** 0
+**Experiments Planned:** 0  
+**Experiments Locked / Running:** 0  
+**Experiments Completed:** 1 (001 — Evidence: WEAK; validation not revealed)  
+**Strong Candidates:** 0  
+**Validated Patterns:** 0  
 **Rejected Patterns:** 0
 
 ---

@@ -1,0 +1,28 @@
+{
+  "experiment": "001",
+  "specification": "experiments/EXPERIMENT_001.md",
+  "specification_sections": [
+    "\u00a75 Exact Signal Definitions",
+    "\u00a79 A/B/C/D Comparison Groups"
+  ],
+  "specification_status": "LOCKED",
+  "specification_locked": "2026-08-21",
+  "ticker": "XLB",
+  "research_partition": "discovery",
+  "source_csv": "experiments/001/discovery/input/xlb_discovery_input.csv",
+  "output_csv": "experiments/001/discovery/signals/xlb_discovery_signals.csv",
+  "row_count": 5549,
+  "group_A_count": 5549,
+  "group_B_count": 1148,
+  "group_C_count": 4078,
+  "group_D_count": 831,
+  "inequalities_ok": true,
+  "group_semantics": "overlapping comparison sets (not mutually exclusive)",
+  "explicitly_not_computed": [
+    "forward returns",
+    "win rates / average returns",
+    "MAE/MFE",
+    "validation classification"
+  ],
+  "created_at_utc": "2026-08-21T07:32:49.627765+00:00"
+}

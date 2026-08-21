@@ -1,0 +1,21 @@
+{
+  "experiment": "001",
+  "partition": "discovery",
+  "specification": "experiments/EXPERIMENT_001.md",
+  "rating": "WEAK",
+  "min_n_D": 8848,
+  "horizons_directional": 2,
+  "horizons_lift_ge_3pp": 0,
+  "horizons_lift_ge_5pp": 0,
+  "etf_support_ge_3_of_5_horizons": 6,
+  "max_d_share": 0.12590415913200723,
+  "max_d_share_ticker": "XLE",
+  "material_downside_vs_B": false,
+  "reasons": [
+    "Some D>B improvement (directional horizons=2/5, ETF support=6/13) but below INTERESTING thresholds and/or robustness/downside/concentration constraints.",
+    "lift>=3pp only on 0/5 horizons (need 3).",
+    "Only 6/13 ETFs show D>B on >=3/5 horizons (need 7)."
+  ],
+  "validation_revealed": false,
+  "created_at_utc": "2026-08-21T07:40:15.949343+00:00"
+}

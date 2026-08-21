@@ -1,0 +1,25 @@
+{
+  "experiment": "001",
+  "specification": "experiments/EXPERIMENT_001.md",
+  "specification_section": "\u00a713 Discovery / Validation Split",
+  "specification_status": "LOCKED",
+  "specification_locked": "2026-08-21",
+  "ticker": "XLE",
+  "source_eligible_base": "experiments/001/eligible/xle_eligible_base.csv",
+  "eligible_row_count": 6937,
+  "discovery_row_count": 5549,
+  "validation_row_count": 1388,
+  "discovery_fraction_rule": "first floor(80%) of eligible rows by date",
+  "last_discovery_date": "2021-02-09",
+  "first_validation_date": "2021-02-10",
+  "chronological_order_ok": true,
+  "explicitly_not_computed": [
+    "A/B/C/D membership",
+    "forward returns",
+    "MAE/MFE",
+    "win rates or other outcome metrics"
+  ],
+  "created_at_utc": "2026-08-21T07:31:11.145276+00:00",
+  "research_partition": "validation",
+  "output_csv": "experiments/001/validation/input/xle_validation_input.csv"
+}

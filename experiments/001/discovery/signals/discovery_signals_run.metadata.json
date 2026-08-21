@@ -1,0 +1,122 @@
+{
+  "experiment": "001",
+  "specification": "experiments/EXPERIMENT_001.md",
+  "step": "28 \u2014 discovery A/B/C/D signal classification only",
+  "discovery_signals_directory": "experiments/001/discovery/signals",
+  "validation_touched": false,
+  "audit": [
+    {
+      "ticker": "SPY",
+      "A": 6598,
+      "B": 748,
+      "C": 5057,
+      "D": 584,
+      "inequalities_ok": true
+    },
+    {
+      "ticker": "QQQ",
+      "A": 5508,
+      "B": 1292,
+      "C": 4037,
+      "D": 1013,
+      "inequalities_ok": true
+    },
+    {
+      "ticker": "IWM",
+      "A": 5261,
+      "B": 1125,
+      "C": 3817,
+      "D": 861,
+      "inequalities_ok": true
+    },
+    {
+      "ticker": "XLB",
+      "A": 5549,
+      "B": 1148,
+      "C": 4078,
+      "D": 831,
+      "inequalities_ok": true
+    },
+    {
+      "ticker": "XLC",
+      "A": 1627,
+      "B": 304,
+      "C": 1280,
+      "D": 249,
+      "inequalities_ok": true
+    },
+    {
+      "ticker": "XLE",
+      "A": 5549,
+      "B": 1396,
+      "C": 4078,
+      "D": 1114,
+      "inequalities_ok": true
+    },
+    {
+      "ticker": "XLF",
+      "A": 5549,
+      "B": 1022,
+      "C": 4078,
+      "D": 786,
+      "inequalities_ok": true
+    },
+    {
+      "ticker": "XLI",
+      "A": 5549,
+      "B": 997,
+      "C": 4078,
+      "D": 772,
+      "inequalities_ok": true
+    },
+    {
+      "ticker": "XLK",
+      "A": 5549,
+      "B": 1175,
+      "C": 4078,
+      "D": 911,
+      "inequalities_ok": true
+    },
+    {
+      "ticker": "XLP",
+      "A": 5549,
+      "B": 372,
+      "C": 4078,
+      "D": 240,
+      "inequalities_ok": true
+    },
+    {
+      "ticker": "XLRE",
+      "A": 2169,
+      "B": 350,
+      "C": 1764,
+      "D": 269,
+      "inequalities_ok": true
+    },
+    {
+      "ticker": "XLU",
+      "A": 5549,
+      "B": 737,
+      "C": 4078,
+      "D": 537,
+      "inequalities_ok": true
+    },
+    {
+      "ticker": "XLV",
+      "A": 5549,
+      "B": 715,
+      "C": 4078,
+      "D": 521,
+      "inequalities_ok": true
+    },
+    {
+      "ticker": "XLY",
+      "A": 5549,
+      "B": 1042,
+      "C": 4078,
+      "D": 744,
+      "inequalities_ok": true
+    }
+  ],
+  "created_at_utc": "2026-08-21T07:32:49.627765+00:00"
+}

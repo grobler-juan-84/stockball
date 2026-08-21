@@ -1,0 +1,25 @@
+{
+  "experiment": "001",
+  "specification": "experiments/EXPERIMENT_001.md",
+  "specification_section": "\u00a713 Discovery / Validation Split",
+  "specification_status": "LOCKED",
+  "specification_locked": "2026-08-21",
+  "ticker": "XLC",
+  "source_eligible_base": "experiments/001/eligible/xlc_eligible_base.csv",
+  "eligible_row_count": 2034,
+  "discovery_row_count": 1627,
+  "validation_row_count": 407,
+  "discovery_fraction_rule": "first floor(80%) of eligible rows by date",
+  "last_discovery_date": "2025-01-03",
+  "first_validation_date": "2025-01-06",
+  "chronological_order_ok": true,
+  "explicitly_not_computed": [
+    "A/B/C/D membership",
+    "forward returns",
+    "MAE/MFE",
+    "win rates or other outcome metrics"
+  ],
+  "created_at_utc": "2026-08-21T07:31:11.145276+00:00",
+  "research_partition": "validation",
+  "output_csv": "experiments/001/validation/input/xlc_validation_input.csv"
+}

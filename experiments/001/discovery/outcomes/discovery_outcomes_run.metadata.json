@@ -1,0 +1,136 @@
+{
+  "experiment": "001",
+  "step": "29 \u2014 discovery outcomes calculated; no performance summary",
+  "specification": "experiments/EXPERIMENT_001.md",
+  "outcomes_directory": "experiments/001/discovery/outcomes",
+  "validation_touched": false,
+  "audit": [
+    {
+      "ticker": "SPY",
+      "status": "PASS",
+      "horizon_1d_available_count": 6598,
+      "horizon_3d_available_count": 6598,
+      "horizon_5d_available_count": 6598,
+      "horizon_10d_available_count": 6598,
+      "horizon_20d_available_count": 6598
+    },
+    {
+      "ticker": "QQQ",
+      "status": "PASS",
+      "horizon_1d_available_count": 5508,
+      "horizon_3d_available_count": 5508,
+      "horizon_5d_available_count": 5508,
+      "horizon_10d_available_count": 5508,
+      "horizon_20d_available_count": 5508
+    },
+    {
+      "ticker": "IWM",
+      "status": "PASS",
+      "horizon_1d_available_count": 5261,
+      "horizon_3d_available_count": 5261,
+      "horizon_5d_available_count": 5261,
+      "horizon_10d_available_count": 5261,
+      "horizon_20d_available_count": 5261
+    },
+    {
+      "ticker": "XLB",
+      "status": "PASS",
+      "horizon_1d_available_count": 5549,
+      "horizon_3d_available_count": 5549,
+      "horizon_5d_available_count": 5549,
+      "horizon_10d_available_count": 5549,
+      "horizon_20d_available_count": 5549
+    },
+    {
+      "ticker": "XLC",
+      "status": "PASS",
+      "horizon_1d_available_count": 1627,
+      "horizon_3d_available_count": 1627,
+      "horizon_5d_available_count": 1627,
+      "horizon_10d_available_count": 1627,
+      "horizon_20d_available_count": 1627
+    },
+    {
+      "ticker": "XLE",
+      "status": "PASS",
+      "horizon_1d_available_count": 5549,
+      "horizon_3d_available_count": 5549,
+      "horizon_5d_available_count": 5549,
+      "horizon_10d_available_count": 5549,
+      "horizon_20d_available_count": 5549
+    },
+    {
+      "ticker": "XLF",
+      "status": "PASS",
+      "horizon_1d_available_count": 5549,
+      "horizon_3d_available_count": 5549,
+      "horizon_5d_available_count": 5549,
+      "horizon_10d_available_count": 5549,
+      "horizon_20d_available_count": 5549
+    },
+    {
+      "ticker": "XLI",
+      "status": "PASS",
+      "horizon_1d_available_count": 5549,
+      "horizon_3d_available_count": 5549,
+      "horizon_5d_available_count": 5549,
+      "horizon_10d_available_count": 5549,
+      "horizon_20d_available_count": 5549
+    },
+    {
+      "ticker": "XLK",
+      "status": "PASS",
+      "horizon_1d_available_count": 5549,
+      "horizon_3d_available_count": 5549,
+      "horizon_5d_available_count": 5549,
+      "horizon_10d_available_count": 5549,
+      "horizon_20d_available_count": 5549
+    },
+    {
+      "ticker": "XLP",
+      "status": "PASS",
+      "horizon_1d_available_count": 5549,
+      "horizon_3d_available_count": 5549,
+      "horizon_5d_available_count": 5549,
+      "horizon_10d_available_count": 5549,
+      "horizon_20d_available_count": 5549
+    },
+    {
+      "ticker": "XLRE",
+      "status": "PASS",
+      "horizon_1d_available_count": 2169,
+      "horizon_3d_available_count": 2169,
+      "horizon_5d_available_count": 2169,
+      "horizon_10d_available_count": 2169,
+      "horizon_20d_available_count": 2169
+    },
+    {
+      "ticker": "XLU",
+      "status": "PASS",
+      "horizon_1d_available_count": 5549,
+      "horizon_3d_available_count": 5549,
+      "horizon_5d_available_count": 5549,
+      "horizon_10d_available_count": 5549,
+      "horizon_20d_available_count": 5549
+    },
+    {
+      "ticker": "XLV",
+      "status": "PASS",
+      "horizon_1d_available_count": 5549,
+      "horizon_3d_available_count": 5549,
+      "horizon_5d_available_count": 5549,
+      "horizon_10d_available_count": 5549,
+      "horizon_20d_available_count": 5549
+    },
+    {
+      "ticker": "XLY",
+      "status": "PASS",
+      "horizon_1d_available_count": 5549,
+      "horizon_3d_available_count": 5549,
+      "horizon_5d_available_count": 5549,
+      "horizon_10d_available_count": 5549,
+      "horizon_20d_available_count": 5549
+    }
+  ],
+  "created_at_utc": "2026-08-21T07:36:21.375586+00:00"
+}
