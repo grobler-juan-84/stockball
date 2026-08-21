@@ -88,3 +88,19 @@ Ran `scripts/run_equity_pipeline.py` for all 14 equity ETFs. All completed Acqui
 ## Step 21 — Commit and push equity universe milestone to GitHub
 
 Committed the equity-universe pipeline runner and project step log through Step 21 (full 14-ETF Acquire → Validate → Process milestone); pushed `main` to `origin`. Raw/processed CSVs and `.env.local` remained untracked.
+
+## Step 22 — Formalize Experiment 001 specification (documentation only)
+
+Created/updated `experiments/EXPERIMENT_001.md` with the complete agreed methodology (T/T+1 timing, A/B/C/D with D-vs-B primary, aligned eligibility, 80/20 hidden validation, evidence thresholds, downside gate, SPY-separate vs pooled-13 reporting). Synchronized Success Criteria and Known Limitations in `docs/project_registry.md`. Status remains **PLANNED** (not locked, not executed). No indicators, datasets, or results generated.
+
+## Step 23 — Resolve Experiment 001 pre-lock methodology flags
+
+Updated `experiments/EXPERIMENT_001.md` and `docs/project_registry.md`: downside = multi-metric qualitative D-vs-B gate (no single numeric cutoff); MAE/MFE from T+1 open via min low / max high through exit day (no intraday path ordering); no formal statistical inference in 001 (descriptive evidence only). Status remains **PLANNED**.
+
+## Step 24 — Lock Experiment 001 methodology
+
+Final consistency check between `experiments/EXPERIMENT_001.md` and the Experiment 001 registry entry found no contradictions or unresolved methodological ambiguities. Changed status **PLANNED → LOCKED** (lock date **2026-08-21**) in the specification and registry index. No methodological edits beyond the status lock; no experiment code or results.
+
+## Step 25 — Commit and push Experiment 001 lock to GitHub
+
+Committed `experiments/EXPERIMENT_001.md`, updated `docs/project_registry.md`, and `project_steps.md` through Step 25 (Experiment 001 methodology LOCKED 2026-08-21); pushed `main` to `origin`. No experiment code or results included.
