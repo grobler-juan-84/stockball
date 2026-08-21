@@ -1,0 +1,22 @@
+{
+  "equity_etfs": [
+    "SPY",
+    "QQQ",
+    "IWM",
+    "XLB",
+    "XLC",
+    "XLE",
+    "XLF",
+    "XLI",
+    "XLK",
+    "XLP",
+    "XLRE",
+    "XLU",
+    "XLV",
+    "XLY"
+  ],
+  "notes": [
+    "Initial Stockball equity research universe from the decision log.",
+    "XLC and XLRE have shorter histories than older sector ETFs; each ticker contributes only from when reliable data exists. Do not fabricate earlier history for symmetry."
+  ]
+}

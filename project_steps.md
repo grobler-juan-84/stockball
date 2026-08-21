@@ -48,3 +48,31 @@ Added `scripts/process_spy_daily.py` and wrote `data/processed/spy_daily.csv` pl
 ## Step 11 — Commit and push research scripts to GitHub
 
 Committed Tiingo smoke/download/validate/process scripts, `project_steps.md`, the project-steps Cursor rule, and `communication_protocol.md`; pushed `main` to `origin`. Raw/processed CSVs and `.env.local` remained untracked.
+
+## Step 12 — Generalize Tiingo daily download by ticker
+
+Added `scripts/download_tiingo_daily.py` so any ticker can be downloaded with the same raw-data rules (`python scripts/download_tiingo_daily.py SPY` / `QQQ`). Turned `download_spy_tiingo_daily.py` into a thin SPY wrapper. Did not download QQQ yet; validate/process remain SPY-specific for now.
+
+## Step 13 — Download QQQ maximum daily history (raw)
+
+Ran `scripts/download_tiingo_daily.py QQQ` and wrote `data/raw/qqq_tiingo_daily.csv` plus metadata (6,905 rows, 13 Tiingo fields, 1999-03-10 through 2026-08-20). No validation, processing, or indicators.
+
+## Step 14 — Generalize raw validation and validate QQQ
+
+Added `scripts/validate_tiingo_daily.py` (same checks as the SPY validator, ticker argument; row count taken from each file's metadata). Turned `validate_spy_tiingo_daily.py` into a thin wrapper. Ran validation on QQQ only: **PASS** (6,905 rows; 88 dividend rows; 1 split row). No processing or indicators.
+
+## Step 15 — Generalize adjusted-price processing and process QQQ
+
+Added `scripts/process_tiingo_daily.py` (same adj\* → OHLCV rename as SPY) and turned `process_spy_daily.py` into a thin wrapper. Processed QQQ only → `data/processed/qqq_daily.csv` + metadata (6,905 rows; 0 dropped; close equals raw adjClose). No returns, momentum, or moving averages.
+
+## Step 16 — Run IWM through Acquire → Validate → Process
+
+Ran existing generic scripts only (`download_tiingo_daily.py`, `validate_tiingo_daily.py`, `process_tiingo_daily.py`) for IWM — no machinery changes. Acquire 6,597 rows (2000-05-26 → 2026-08-20); Validate **PASS** (105 dividend rows, 1 split row); Process wrote `iwm_daily.csv` with 0 rows dropped and close == raw adjClose.
+
+## Step 17 — Create machine-readable initial equity research universe
+
+Added `config/research_universe.json` with SPY, QQQ, IWM, and the 11 SPDR sector ETFs (14 tickers). Notes that XLC/XLRE have shorter histories and must not be backfilled for symmetry. No scripts consume this file yet; no new downloads or indicators.
+
+## Step 18 — Commit generalized ETF data pipeline to GitHub
+
+Committed ticker-parameterized download/validate/process scripts, SPY thin wrappers, `config/research_universe.json`, and updated `project_steps.md` (Steps 12–18); pushed `main` to `origin`. Raw/processed CSVs and `.env.local` remained untracked.
